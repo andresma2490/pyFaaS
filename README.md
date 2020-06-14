@@ -1,4 +1,4 @@
-# pyPandas
+# pyFaaS
 
 ## Instrucciones
 
