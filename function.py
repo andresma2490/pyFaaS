@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import io
 
-def handle(req):
+def handle():
 	url = 'https://www.datos.gov.co/api/views/gt2j-8ykr/rows.csv?accessType=DOWNLOAD'
 	
 	try:
@@ -25,4 +25,11 @@ def handle(req):
 	df = df.loc[ df.Ciudad == 'Cali' ]
 	print(df.groupby('Tipo').Tipo.count())
 	
+	print("\nCon un total de...")
+	df = df.loc[ df.Ciudad == 'Cali' ]
+	print(df.groupby('atención').atención.count())
+	
 	return 
+
+# needs
+handle()

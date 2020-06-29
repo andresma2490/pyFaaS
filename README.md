@@ -1,13 +1,17 @@
-# pyFaaS
+# pyFunction
 
 ## Instrucciones
 
 ``` bash
-# Tener un cluster de Kubernetes con OpenFaas instalado 
+# Usar un ambiente virtual con python3 (recomendado)
+virtualenv -p python3 env
 
-# Usar faas-cli para hacer el deploy ()
-faas-cli up -f pyfunction.yml --skip-push
+# Activar el ambiente, en linux es
+source env/bin/activate
 
-# Hacer llamado a la funcion
-echo "something"|faas-cli invoke pyfunction
+# Instalar en el env las librerias necesarias con
+pip install -r requirements.txt
+
+# Ejecutar la funcion
+python function.py
 ```
